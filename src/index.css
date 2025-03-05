@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .userdata-input {
+        @apply border rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white
+    }
+
+    .userdata-label {
+        @apply block mb-2 text-sm font-medium text-white
+    }
+
+    .message-container {
+        width: 100%;
+        height: 495px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .message-game-container {
+            width: 308px;
+            height: 360px;
+            overflow-y: hidden;
+            overflow-x: hidden;
+    }
+
+    .categories-container {
+        width: 100%;
+        height: 360px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .dark-mode {
+        color-scheme: dark;
+    }
+
+    .blocker {
+        pointer-events: none;
+    }
+
+    @keyframes bouncing {
+        0% {
+            transform: translateY(0);
+        }
+    
+        50% {
+            transform: translateY(-3px);
+        }
+    
+        100% {
+            transform: translateY(0);
+        }
+    }
+        
+    .bouncing {
+        backface-visibility: hidden;
+        animation: bouncing 1s ease-in-out infinite;
+    }
+
+    .question {
+        @apply border-slate-200/40 border-2 rounded-md bg-slate-900/70 text-white
+    }
+    
+    .question-question-div {
+         @apply flex justify-center items-center p-2 bg-slate-800 rounded-t-md
+    }
+
+    .question-question {
+        @apply text-3xl text-white font-normal px-4 py-2
+    }
+
+    .question-category {
+        @apply text-white/60 text-[20px] text-end font-thin tracking-wide
+    }
+
+    .numeric-question-question-div {
+        @apply flex justify-center items-center p-2 bg-slate-900 font-semibold border-y-2 border-slate-400/50
+    }
+
+    .numeric-question-result {
+        @apply animate-pulse text-yellow-200 text-4xl rounded-lg
+    }
+
+    .pick-question-answer {
+        @apply text-lg z-50 tracking-wide leading-tight
+    }
+
+    .image-question-img {
+        @apply object-contain max-h-[480px] max-w-[620px] rounded-md border-slate-600 border-2
+    }
+
+    .image-quesiton-img-div {
+        @apply flex justify-center items-center pt-4 px-2
+    }
+
+    .image-question-grid {
+        @apply grid grid-cols-2 p-4
+    }
+}
